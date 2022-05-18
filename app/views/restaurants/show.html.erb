@@ -1,0 +1,39 @@
+<div class="container">
+  <h1><%= @restaurant.name %></h1>
+  <div class="container-info">
+    <div class='info-card'>
+      <h4>Address</h4>
+      <%= @restaurant.address %>
+    </div>
+    <div class='info-card'>
+      <h4>Phone number</h4>
+      <%= @restaurant.phone_number %>
+    </div>
+    <div class='info-card'>
+      <h4>Cuisine</h4>
+      <%= @restaurant.category %>
+    </div>
+  </div>
+</div>
+<div class="container-reviews">
+  <h2>Reviews</h2>
+  <div class='review-card'>
+    <% if @reviews.empty? %>
+      <p>There are no reviews for this restaurants yet.</p>
+    <% else %>
+      <% @reviews.each do |review| %>
+        <% 5.times do |i| %>
+          <% if i < review.rating%>
+            <i class="fas fa-star"></i>
+          <% else %>
+            <i class="far fa-star"></i>
+          <% end %>
+        <% end %>
+        <p><%= review.content %></p>
+      <% end %>
+    <% end %>
+</div>
+
+<div class="container">
+  <%= link_to "Add a review", new_restaurant_review_path(@restaurant), class: "btn btn-blue" %>
+</div>

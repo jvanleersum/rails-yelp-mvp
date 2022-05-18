@@ -1,0 +1,46 @@
+// Place all the styles related to the restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-info {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+  width: 75%;
+}
+
+.container-reviews {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-reviews h2 {
+  text-align: center;
+}
+
+.info-card {
+  background-color: whitesmoke;
+  width: 200px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  margin: 8px;
+  padding: 16px;
+}
+
+.review-card {
+  background-color: whitesmoke;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  margin: 8px;
+  padding: 16px;
+}

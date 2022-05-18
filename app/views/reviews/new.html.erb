@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Add a review for <%= @restaurant.name %></h1>
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+    <%= f.label :rating %>
+    <%= f.range_field :rating, in: 0..5, value: 3, step: 1%>
+    <br>
+    <%= f.submit %>
+  <% end %>
+</div>

@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light">
+      <%= link_to "RateTheRestaurant", restaurants_path, class: "logo" %>
+      <%= link_to "Create a new Restaurant", new_restaurant_path, class: "btn btn-blue" %>
+    </nav>
     <%= yield %>
   </body>
 </html>
